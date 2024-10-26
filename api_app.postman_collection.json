@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "fd92f101-37b0-4977-a142-714abf3c7bdd",
 		"name": "api_app",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
 		"_exporter_id": "28018866"
 	},
 	"item": [
@@ -23,17 +23,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:8080/signup",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"signup"
-					]
-				}
+				"url": "https://api-app-gold.vercel.app/signup"
 			},
 			"response": []
 		},
@@ -54,17 +44,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:8080/signin",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"signin"
-					]
-				}
+				"url": "http://localhost:8080/signin"
 			},
 			"response": []
 		},
@@ -85,17 +65,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:8080/refresh-token",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"refresh-token"
-					]
-				}
+				"url": "http://localhost:8080/refresh-token"
 			},
 			"response": []
 		},
@@ -104,13 +74,9 @@
 			"request": {
 				"auth": {
 					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFjMDk0Yjg2ZDIxOTA3OWRiY2M1OTgiLCJ1c2VybmFtZSI6Ik1lcmVoYW4iLCJlbWFpbCI6Im1lcmVoYW5AZ21haWwuY29tIiwiaWF0IjoxNzI5OTExNzAxLCJleHAiOjE3Mjk5MTUzMDF9.Q10KaeDEUG8ZG9eYmCF0L5JpwMomH4tfZ9YFKS1Bdx0",
-							"type": "string"
-						}
-					]
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFjMDk0Yjg2ZDIxOTA3OWRiY2M1OTgiLCJ1c2VybmFtZSI6Ik1lcmVoYW4iLCJlbWFpbCI6Im1lcmVoYW5AZ21haWwuY29tIiwiaWF0IjoxNzI5OTExNzAxLCJleHAiOjE3Mjk5MTUzMDF9.Q10KaeDEUG8ZG9eYmCF0L5JpwMomH4tfZ9YFKS1Bdx0"
+					}
 				},
 				"method": "POST",
 				"header": [],
@@ -123,17 +89,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:8080/organization",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"organization"
-					]
-				}
+				"url": "http://localhost:8080/organization"
 			},
 			"response": []
 		},
@@ -142,27 +98,13 @@
 			"request": {
 				"auth": {
 					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFjNzY5OTk2N2Y2NmU4ZWFmZjg3MTUiLCJ1c2VybmFtZSI6Ik1lcmVoYW4iLCJlbWFpbCI6Im1lcmVoYW4yQGdtYWlsLmNvbSIsImlhdCI6MTcyOTkxODYyNiwiZXhwIjoxNzI5OTIyMjI2fQ.kzLm_S4Q2MiK-XsFctT-83zRT_p0DINLG5bfkSE1ASs",
-							"type": "string"
-						}
-					]
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFjNzY5OTk2N2Y2NmU4ZWFmZjg3MTUiLCJ1c2VybmFtZSI6Ik1lcmVoYW4iLCJlbWFpbCI6Im1lcmVoYW4yQGdtYWlsLmNvbSIsImlhdCI6MTcyOTkxODYyNiwiZXhwIjoxNzI5OTIyMjI2fQ.kzLm_S4Q2MiK-XsFctT-83zRT_p0DINLG5bfkSE1ASs"
+					}
 				},
 				"method": "GET",
 				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/organization",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"organization"
-					]
-				}
+				"url": "http://localhost:8080/organization"
 			},
 			"response": []
 		},
@@ -174,13 +116,9 @@
 			"request": {
 				"auth": {
 					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFjMDk0Yjg2ZDIxOTA3OWRiY2M1OTgiLCJ1c2VybmFtZSI6Ik1lcmVoYW4iLCJlbWFpbCI6Im1lcmVoYW5AZ21haWwuY29tIiwiaWF0IjoxNzI5OTE1Mzc3LCJleHAiOjE3Mjk5MTg5Nzd9.sWnIQEtEJv7e7A9SAdazYJbhD_YYQg4kc8UJovvX3gg",
-							"type": "string"
-						}
-					]
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFjMDk0Yjg2ZDIxOTA3OWRiY2M1OTgiLCJ1c2VybmFtZSI6Ik1lcmVoYW4iLCJlbWFpbCI6Im1lcmVoYW5AZ21haWwuY29tIiwiaWF0IjoxNzI5OTE1Mzc3LCJleHAiOjE3Mjk5MTg5Nzd9.sWnIQEtEJv7e7A9SAdazYJbhD_YYQg4kc8UJovvX3gg"
+					}
 				},
 				"method": "GET",
 				"header": [],
@@ -193,18 +131,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:8080/organization/671c2a010500181311954f99",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"organization",
-						"671c2a010500181311954f99"
-					]
-				}
+				"url": "http://localhost:8080/organization/671c2a010500181311954f99"
 			},
 			"response": []
 		},
@@ -213,13 +140,9 @@
 			"request": {
 				"auth": {
 					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFjMDk0Yjg2ZDIxOTA3OWRiY2M1OTgiLCJ1c2VybmFtZSI6Ik1lcmVoYW4iLCJlbWFpbCI6Im1lcmVoYW5AZ21haWwuY29tIiwiaWF0IjoxNzI5OTE1Mzc3LCJleHAiOjE3Mjk5MTg5Nzd9.sWnIQEtEJv7e7A9SAdazYJbhD_YYQg4kc8UJovvX3gg",
-							"type": "string"
-						}
-					]
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFjMDk0Yjg2ZDIxOTA3OWRiY2M1OTgiLCJ1c2VybmFtZSI6Ik1lcmVoYW4iLCJlbWFpbCI6Im1lcmVoYW5AZ21haWwuY29tIiwiaWF0IjoxNzI5OTE1Mzc3LCJleHAiOjE3Mjk5MTg5Nzd9.sWnIQEtEJv7e7A9SAdazYJbhD_YYQg4kc8UJovvX3gg"
+					}
 				},
 				"method": "PUT",
 				"header": [],
@@ -232,18 +155,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:8080/organization/671c64890ebab67e067b0a5a",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"organization",
-						"671c64890ebab67e067b0a5a"
-					]
-				}
+				"url": "http://localhost:8080/organization/671c64890ebab67e067b0a5a"
 			},
 			"response": []
 		},
@@ -252,13 +164,9 @@
 			"request": {
 				"auth": {
 					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFjMDk0Yjg2ZDIxOTA3OWRiY2M1OTgiLCJ1c2VybmFtZSI6Ik1lcmVoYW4iLCJlbWFpbCI6Im1lcmVoYW5AZ21haWwuY29tIiwiaWF0IjoxNzI5OTE1Mzc3LCJleHAiOjE3Mjk5MTg5Nzd9.sWnIQEtEJv7e7A9SAdazYJbhD_YYQg4kc8UJovvX3gg",
-							"type": "string"
-						}
-					]
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFjMDk0Yjg2ZDIxOTA3OWRiY2M1OTgiLCJ1c2VybmFtZSI6Ik1lcmVoYW4iLCJlbWFpbCI6Im1lcmVoYW5AZ21haWwuY29tIiwiaWF0IjoxNzI5OTE1Mzc3LCJleHAiOjE3Mjk5MTg5Nzd9.sWnIQEtEJv7e7A9SAdazYJbhD_YYQg4kc8UJovvX3gg"
+					}
 				},
 				"method": "POST",
 				"header": [],
@@ -271,19 +179,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:8080/organization/671c29cac4f971e44d9e1f6a/invite",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"organization",
-						"671c29cac4f971e44d9e1f6a",
-						"invite"
-					]
-				}
+				"url": "http://localhost:8080/organization/671c29cac4f971e44d9e1f6a/invite"
 			},
 			"response": []
 		},
@@ -301,18 +197,31 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:8080/organization/671c4b4c5048bb96455c6e23",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"organization",
-						"671c4b4c5048bb96455c6e23"
-					]
-				}
+				"url": "http://localhost:8080/organization/671c4b4c5048bb96455c6e23"
+			},
+			"response": []
+		},
+		{
+			"name": "revoke refreshToken",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFjNzY5OTk2N2Y2NmU4ZWFmZjg3MTUiLCJ1c2VybmFtZSI6Ik1lcmVoYW4iLCJlbWFpbCI6Im1lcmVoYW4yQGdtYWlsLmNvbSIsImlhdCI6MTcyOTk0OTExNywiZXhwIjoxNzI5OTUyNzE3fQ.QhiyxPoiuP378dj6_HfsNjqwxrtUaj0U9P55h9LvVeA"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"refresh_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFjNzY5OTk2N2Y2NmU4ZWFmZjg3MTUiLCJ1c2VybmFtZSI6Ik1lcmVoYW4iLCJlbWFpbCI6Im1lcmVoYW4yQGdtYWlsLmNvbSIsImlhdCI6MTcyOTkxODYyNiwiZXhwIjoxNzI5OTI0MDI2fQ.4EQq8EVUBSpxgbRHCe9OBXT9g06rkAEHqpmEQLv6spk\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/revoke-refresh-token"
 			},
 			"response": []
 		}
