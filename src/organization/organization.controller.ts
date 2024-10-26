@@ -106,4 +106,16 @@ export class OrganizationController {
       throw err;
     }
   }
+
+  @Post('/member')
+  @UsePipes(new ValidationPipe({ whitelist: true }))
+  async addMember(@Req() req, @Res() res, @Body() body: any) {
+    try {
+      const organizationMember =
+        await this.organizationService.createOrganizationMember(body);
+      res.status(201).json(organizationMember);
+    } catch (err) {
+      throw err;
+    }
+  }
 }

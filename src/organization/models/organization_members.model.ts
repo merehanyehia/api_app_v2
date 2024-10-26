@@ -14,6 +14,8 @@ export class Organization_members {
 
   @Prop()
   access_level: string;
+  @Prop({ type: Types.ObjectId, ref: 'User' })
+  memberId: string;
 }
 export const Organization_membersSchema =
   SchemaFactory.createForClass(Organization_members);

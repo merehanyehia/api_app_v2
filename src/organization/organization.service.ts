@@ -9,6 +9,8 @@ import { Model } from 'mongoose';
 import { OrganizationDto } from './dto/organization.dto';
 import { Organization_membersDto } from './dto/organization_members.dto';
 import { Organization_members } from './models/organization_members.model';
+import { JwtService } from '@nestjs/jwt';
+import { User } from 'auth/model/auth.model';
 
 @Injectable()
 export class OrganizationService {
@@ -18,6 +20,9 @@ export class OrganizationService {
 
     @InjectModel(Organization_members.name)
     private Organization_membersModel: Model<Organization_members>,
+    @InjectModel(User.name)
+    private userModel: Model<User>,
+    private jwtService: JwtService,
   ) {}
   async createOrganization(orgData) {
     const { name, description } = orgData;
@@ -160,5 +165,36 @@ export class OrganizationService {
       access_level: 'readonly',
     }).save();
     return `user invited to ${findOrg.name} successfully`;
+  }
+
+  async createOrganizationMember(memberData) {
+    const { name, email, access_level } = memberData;
+    const findMember = await this.Organization_membersModel.findOne({
+      email: email,
+    });
+    const findMemberId = await this.userModel.findOne({
+      email: email,
+    });
+    if (findMemberId === null) {
+      throw new BadRequestException('User does not exist');
+    }
+    if (findMember !== null) {
+      throw new BadRequestException('Member already exists');
+    }
+    const organization = await this.organizationModel.findOne({
+      name: memberData.org_name,
+    });
+    if (!organization) {
+      throw new NotFoundException('Organization not found');
+    }
+
+    const member = await new this.Organization_membersModel({
+      name,
+      email,
+      access_level,
+      orgId: organization._id,
+      memberId: findMemberId._id,
+    }).save();
+    return member;
   }
 }
