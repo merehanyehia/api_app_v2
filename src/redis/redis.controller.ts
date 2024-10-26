@@ -1,7 +1,7 @@
 import { Body, Controller, Post, Req, Res, UseGuards } from '@nestjs/common';
-import { AuthGuard } from 'guards/auth.guard';
+import { AuthGuard } from '../guards/auth.guard';
 import { RedisService } from './redis.service';
-import { RefreshTokenDto } from 'auth/dto/auth.dto';
+import { RefreshTokenDto } from '../auth/dto/auth.dto';
 
 @Controller()
 @UseGuards(AuthGuard)
