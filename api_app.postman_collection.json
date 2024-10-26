@@ -1,0 +1,320 @@
+{
+	"info": {
+		"_postman_id": "fd92f101-37b0-4977-a142-714abf3c7bdd",
+		"name": "api_app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28018866"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Merehan\",\n    \"email\":\"merehan2@gmail.com\",\n    \"password\":\"Pass@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"merehan2@gmail.com\",\n    \"password\":\"Pass@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update Tokens",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"refresh_token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFjMDk0Yjg2ZDIxOTA3OWRiY2M1OTgiLCJ1c2VybmFtZSI6Ik1lcmVoYW4iLCJlbWFpbCI6Im1lcmVoYW5AZ21haWwuY29tIiwiaWF0IjoxNzI5ODkzNDM5LCJleHAiOjE3Mjk4OTg4Mzl9.XARdus4pLsJ8XUobitZ-AEwSnSp0JuoG4OfURqG48z0\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/refresh-token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"refresh-token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add New Org",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFjMDk0Yjg2ZDIxOTA3OWRiY2M1OTgiLCJ1c2VybmFtZSI6Ik1lcmVoYW4iLCJlbWFpbCI6Im1lcmVoYW5AZ21haWwuY29tIiwiaWF0IjoxNzI5OTExNzAxLCJleHAiOjE3Mjk5MTUzMDF9.Q10KaeDEUG8ZG9eYmCF0L5JpwMomH4tfZ9YFKS1Bdx0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n \"name\": \"LG\",\n \"description\": \"campony for phones, laptops, watches and airpods\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/organization",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"organization"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get All Orgs",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFjNzY5OTk2N2Y2NmU4ZWFmZjg3MTUiLCJ1c2VybmFtZSI6Ik1lcmVoYW4iLCJlbWFpbCI6Im1lcmVoYW4yQGdtYWlsLmNvbSIsImlhdCI6MTcyOTkxODYyNiwiZXhwIjoxNzI5OTIyMjI2fQ.kzLm_S4Q2MiK-XsFctT-83zRT_p0DINLG5bfkSE1ASs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/organization",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"organization"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Single Org",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFjMDk0Yjg2ZDIxOTA3OWRiY2M1OTgiLCJ1c2VybmFtZSI6Ik1lcmVoYW4iLCJlbWFpbCI6Im1lcmVoYW5AZ21haWwuY29tIiwiaWF0IjoxNzI5OTE1Mzc3LCJleHAiOjE3Mjk5MTg5Nzd9.sWnIQEtEJv7e7A9SAdazYJbhD_YYQg4kc8UJovvX3gg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n \"name\": \"Apple\",\n \"description\": \"campony for phones, laptops, watches and airpods\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/organization/671c2a010500181311954f99",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"organization",
+						"671c2a010500181311954f99"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update Org",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFjMDk0Yjg2ZDIxOTA3OWRiY2M1OTgiLCJ1c2VybmFtZSI6Ik1lcmVoYW4iLCJlbWFpbCI6Im1lcmVoYW5AZ21haWwuY29tIiwiaWF0IjoxNzI5OTE1Mzc3LCJleHAiOjE3Mjk5MTg5Nzd9.sWnIQEtEJv7e7A9SAdazYJbhD_YYQg4kc8UJovvX3gg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n \"name\": \"Lg\",\n \"description\": \"campony for tvs, laptops, electronic devices\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/organization/671c64890ebab67e067b0a5a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"organization",
+						"671c64890ebab67e067b0a5a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user_invite",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFjMDk0Yjg2ZDIxOTA3OWRiY2M1OTgiLCJ1c2VybmFtZSI6Ik1lcmVoYW4iLCJlbWFpbCI6Im1lcmVoYW5AZ21haWwuY29tIiwiaWF0IjoxNzI5OTE1Mzc3LCJleHAiOjE3Mjk5MTg5Nzd9.sWnIQEtEJv7e7A9SAdazYJbhD_YYQg4kc8UJovvX3gg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n \"user_email\": \"merehan@gmail.com\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/organization/671c29cac4f971e44d9e1f6a/invite",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"organization",
+						"671c29cac4f971e44d9e1f6a",
+						"invite"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete Org",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n \"name\": \"Lg\",\n \"description\": \"campony for tvs, laptops, watches and airpods\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/organization/671c4b4c5048bb96455c6e23",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"organization",
+						"671c4b4c5048bb96455c6e23"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

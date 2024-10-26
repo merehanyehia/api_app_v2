@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  app:
+    container_name: api_app
+    build:
+      context: ./
+      dockerfile: DockerFile
+    environment:
+      DATABASE_NAME: api_app
+      DATABASE_USER: MerehanYehia
+      DATABASE_PASS: 4AhkjJ7n6V7eZ70Y
+      DATABASE_URI: mongodb+srv://MerehanYehia:4AhkjJ7n6V7eZ70Y@fiirst.thnqut3.mongodb.net/api_app?retryWrites=true&w=majority
+    ports:
+      - '8080:8080'
+    depends_on:
+      - database
+
+  database:
+    image: mongo:6.0
+    container_name: mongodb
+    restart: always
+    ports:
+      - '27017:27017'
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: MerehanYehia
+      MONGO_INITDB_ROOT_PASSWORD: 4AhkjJ7n6V7eZ70Y
